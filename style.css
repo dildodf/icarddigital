@@ -1,0 +1,370 @@
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-image: url('https://source.unsplash.com/1920x1080/?technology');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-acessar {
+            background-color: #1a73e8;
+            color: white;
+        }
+
+        .btn-conta {
+            background-color: #34a853;
+            color: white;
+        }
+       .btn-a-cardapio {
+            background-color: red;
+            color: white;
+        }
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: auto;
+        }
+        
+        .login { /* Changed from login.html to .login */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        } /* Added closing brace for the .login class */
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-top: 5px;
+        }
+
+        .required::after {
+            content: " *";
+            color: red;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .btn-secondary {
+            background-color: #666;
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        .btn-secondary:hover {
+            opacity: 0.9;
+            background-color: #555;
+        }
+
+        .login-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 300px;
+            margin: 50px auto;
+        }
+        
+        .login-button, .menu-button {
+            padding: 12px;
+            border-radius: 25px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .login-button {
+            background-color: white;
+            color: black;
+        }
+        
+        .menu-button {
+            background-color: red;
+            color: white;
+        }
+        
+        .login-button:hover {
+            background-color: #f0f0f0;
+        }
+        
+        .menu-button:hover {
+            background-color: darkred;
+        }
+        .btn-continuar {
+            background-color: red;
+            color: white;
+        }
+        .btn-voltar {
+            background-color: #4CAF50;
+            color: white;
+        }
+     /*nlogin.css*/
+        .responsive-form {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    .form-group label {
+        color: #000; /* cor preta para a descrição dos campos */
+    }
+    
+    .form-group input,
+    .form-group select {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+    
+    @media (max-width: 600px) {
+        .form-group {
+            padding: 0 10px;
+        }
+    }
+
+
+
+    /* Usando Flexbox no Body para centralizar o conteúdo principal */
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    
+    /* Configuração Flexbox para centralizar o container verticalmente */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+ .search-area {
+    background-color: #ff0000; 
+    border: 1px solid #fcfcfc;
+    padding: 10px;
+    margin-bottom: 20px;
+    /* Ajuste para garantir que a cor de fundo preencha bem */
+    border-radius: 8px 8px 0 0; /* Arredonda apenas os cantos superiores se for o topo do container */
+}
+
+        .search-area input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 1em;
+        }
+
+        /* Área do Cardápio (Conteúdo principal) */
+        .menu-items-box {
+            border: 2px solid #ffffff; /* Borda azul */
+            padding: 10px;
+            background-color: #fff;
+        }
+
+        .menu-items-box h3 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        /* Lista de Itens */
+        .item-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu-item {
+            background-color: #b3b3b3; /* Cor cinza clara conforme o print */
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.2s;
+        }
+
+        .menu-item:hover {
+            background-color: #e5e5e5;
+        }
+
+        .item-details {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .item-details .name {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .item-details .price {
+            color: #555;
+            font-size: 0.95em;
+        }
+
+        /* Botão Adicionar */
+        .add-button {
+            background-color: #ff0000;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.2s;
+        }
+
+        .add-button:hover {
+            background-color: #218838;
+        }
+
+        /* Área do Rodapé (Botão Pedir e Total) */
+        .footer-fixed {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+            padding: 15px 20px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .order-info {
+            display: flex;
+            flex-direction: column;
+            font-size: 1em;
+        }
+        
+        .order-info .total-text {
+            color: #555;
+        }
+        
+        .order-info .total-value {
+            font-weight: bold;
+            color: #d9534f; /* Cor de destaque para o total */
+        }
+
+        /* Botão Pedir (WhatsApp) */
+        .request-button {
+            padding: 12px 25px;
+            background-color: #d32525; /* Cor do WhatsApp */
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .request-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .request-button:not(:disabled):hover {
+            background-color: #1da851;
+        }
+        
+        /* Estilo para lista de itens adicionados (oculta por padrão) */
+        #cart-modal {
+            display: none;
+        }
