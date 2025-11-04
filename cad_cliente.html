@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Estabelecimento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h2>IcardDigital</h2>
+        <style>
+            body {
+                background-image: url('/site/img/Gemini_Generated_Image_psg3odpsg3odpsg3.png');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                min-height: 100vh;
+            }
+        </style>
+        <p>Conectando você à rede exclusiva que garante a máxima excelência em cada produto e serviço oferecido</p>
+    </header>
+
+    <div class="container">
+        <h2>Cadastro de Estabelecimento</h2>
+        
+        <form id="cadastroForm" onsubmit="return validarFormulario()" class="responsive-form">
+            
+            <div class="form-group">
+                <label for="nome" class="required" style="text-align: left;">Nome Completo</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+
+            <div class="form-group">
+                <label for="data-nascimento" style="text-align: left;">Data de Nascimento:</label>
+                <input
+                    type="text"
+                    id="data-nascimento"
+                    name="data-nascimento"
+                    required
+                    placeholder="DD/MM/AAAA"
+                    maxlength="10"
+                    inputmode="numeric"
+                    pattern="\d{2}/\d{2}/\d{4}"
+                    oninput="formatDate(this)"
+                    onblur="validateDate(this)"
+                />
+            </div>
+
+            <div class="form-group">
+                <label for="numero-celular" style="text-align: left;">Número de Celular:</label>
+                <input
+                    type="tel"
+                    id="numero-celular"
+                    name="numero-celular"
+                    required
+                    placeholder="(DD) 9 9999-9999"
+                    maxlength="15"
+                    onkeyup="handlePhone(event)"
+                />
+            </div>
+
+            <button class="btn btn-continuar" type="submit">Continuar</button>
+
+            <button class="btn btn-voltar" onclick="window.location.href='conta_cliente.html'">Voltar</button>
+        </form>
+    </div>
+    
+<footer>
+    <p style="text-align: center;">
+        &copy; 2024 IcardDigital. Todos os direitos reservados.
+        </p>
+<p>
+        <span style="float: right;"> 
+            <a href="mailto:contato@icarddigital.com?subject=Contato%20via%20Fale%20Conosco%20do%20Site" style="color: white; text-decoration: none;">
+                Fale Conosco
+            </a>
+        </span>
+    </p>
+</footer>
+    <script>
+        // --- Funções de Máscara e Validação de DATA ---
+        function formatDate(el) {
+            let v = el.value.replace(/\D/g, '').slice(0, 8); 
+            if (v.length > 2) {
+                v = v.substring(0, 2) + '/' + v.substring(2);
+            }
+            if (v.length > 5) {
+                v = v.substring(0, 5) + '/' + v.substring(5, 9);
+            }
+            el.value = v;
+            el.setCustomValidity('');
+        }
+
+        function validateDate(el) {
+            const v = el.value.trim();
+            const re = /^\d{2}\/\d{2}\/\d{4}$/;
+            
+            if (!re.test(v)) {
+                el.setCustomValidity('Formato inválido. Use DD/MM/AAAA.');
+                el.reportValidity();
+                return false;
+            }
+
+            const parts = v.split('/');
+            const day = parseInt(parts[0], 10);
+            const month = parseInt(parts[1], 10);
+            const year = parseInt(parts[2], 10);
+
+            const today = new Date();
+            today.setHours(0,0,0,0);
+            
+            if (year < 1900 || year > today.getFullYear() || month < 1 || month > 12) {
+                el.setCustomValidity('Data inválida (mês/ano).');
+                el.reportValidity();
+                return false;
+            }
+            
+            const daysInMonth = new Date(year, month, 0).getDate();
+            if (day < 1 || day > daysInMonth) {
+                el.setCustomValidity('Dia inválido para o mês informado.');
+                el.reportValidity();
+                return false;
+            }
+
+            const inputDate = new Date(year, month - 1, day);
+            if (inputDate > today) {
+                el.setCustomValidity('Data não pode ser no futuro.');
+                el.reportValidity();
+                return false;
+            }
+
+            el.setCustomValidity('');
+            return true;
+        }
+
+        // --- Funções de Máscara de TELEFONE ---
+        const handlePhone = (event) => {
+            let input = event.target;
+            input.value = phoneMask(input.value);
+        };
+
+        const phoneMask = (value) => {
+            if (!value) return "";
+            value = value.replace(/\D/g, '');
+            value = value.substring(0, 11);
+            value = value.replace(/^(\d{2})/, '($1)');
+
+            if (value.length > 10) {
+                value = value.replace(/(\d{5})(\d)/, '$1-$2');
+            } else {
+                value = value.replace(/(\d{4})(\d)/, '$1-$2');
+            }
+            
+            value = value.replace(/(\)\d)/, '$1 ');
+            return value;
+        };
+        
+        // --- 4. FUNÇÃO PRINCIPAL DE VALIDAÇÃO E SUBMISSÃO ---
+        function validarFormulario() {
+            const form = document.getElementById('cadastroForm');
+            
+            // Verifica se o navegador suporta a validação nativa do HTML5
+            if (form.checkValidity() === false) {
+                // Se a validação HTML5 falhar (campos 'required' vazios), 
+                // o navegador exibe as mensagens de erro e a função retorna false.
+                return false; 
+            }
+            
+            // Executa a validação manual da Data de Nascimento (importante para o 'onblur')
+            const dataNascimentoInput = document.getElementById('data-nascimento');
+            if (!validateDate(dataNascimentoInput)) {
+                return false; // Se a data for inválida, impede a submissão
+            }
+
+            // Se todos os campos estiverem válidos e preenchidos:
+            
+            // 5. Exibe o Pop-up
+            alert("Cadastro realizado com sucesso. Você está sendo direcionado para o Cardápio");
+            
+            // 6. Redireciona
+            window.location.href = 'c_acesso.html';
+            
+            // Previne a submissão tradicional do formulário (para o action="#")
+            return false; 
+        }
+
+        // Correção do bloco de validação de submissão da data
+        (function() {
+            const dateInput = document.getElementById('data-nascimento');
+            if (dateInput) {
+                const form = dateInput.closest('form');
+                if (form) {
+                    form.removeEventListener('submit', function(e) {
+                         // Removendo o listener antigo pois a nova função validarFormulario já trata tudo
+                    });
+                }
+            }
+        })();
+
+    </script>
+</body>
+</html>
