@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Estabelecimento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h2>IcardDigital</h2>
+        <style>
+            body {
+                background-image: url('/site/img/Gemini_Generated_Image_psg3odpsg3odpsg3.png');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                min-height: 100vh;
+            }
+        </style>
+        <p>Conectando você à rede exclusiva que garante a máxima excelência em cada produto e serviço oferecido</p>
+    <div class="container">
+        <h2>Cadastro de Estabelecimento</h2>
+        
+        <form id="cadastroForm" onsubmit="return validarFormulario()" class="responsive-form">
+            
+            <div class="form-group">
+                <label for="nome" class="required" style="text-align: left;">Nome Completo</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+
+            <div class="form-group">
+                <label for="telefone" class="required" style="text-align: left;">Telefone de Contato</label>
+                <input type="tel" id="telefone" name="telefone" required 
+                       placeholder="(00) 00000-0000" maxlength="15">
+            </div>
+
+            <div class="form-group">
+                <label for="estabelecimento" class="required" style="text-align: left;">Nome do Estabelecimento</label>
+                <input type="text" id="estabelecimento" name="estabelecimento" required>
+            </div>
+
+            <div class="form-group">
+                <label for="cnpj" class="required" style="text-align: left;">CNPJ</label>
+                <input type="text" id="cnpj" name="cnpj" required maxlength="18"
+                       placeholder="00.000.000/0000-00">
+            </div>
+
+            <div class="form-group">
+                <label for="culinaria" class="required" style="text-align: left;">Estilo da Culinária</label>
+                <select id="culinaria" name="culinaria" required>
+                    <option value="">Selecione...</option>
+                    <option value="brasileira">Brasileira</option>
+                    <option value="italiana">Italiana</option>
+                    <option value="japonesa">Japonesa</option>
+                    <option value="mexicana">Mexicana</option>
+                    <option value="outros">Outros</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="cep" class="required" style="text-align: left;">CEP</label>
+                <input type="text" id="cep" name="cep" required maxlength="8"
+                       placeholder="00000000" onblur="consultaCEP()">
+            </div>
+
+            <div class="form-group">
+                <label for="logradouro" class="required" style="text-align: left;">Logradouro</label>
+                <input type="text" id="logradouro" name="logradouro" required>
+            </div>
+
+            <div class="form-group">
+                <label for="rua" class="required" style="text-align: left;">Rua</label>
+                <input type="text" id="rua" name="rua" required> 
+            </div>
+
+            <div class="form-group">
+                <label for="numero" class="required" style="text-align: left;">Número</label>
+                <input type="text" id="numero" name="numero" required>
+            </div>
+
+            <div class="form-group">
+                <label for="bairro" class="required" style="text-align: left;">Bairro</label>
+                <input type="text" id="bairro" name="bairro" required>
+            </div>
+
+            <div class="form-group">
+                <label for="complemento" style="text-align: left;">Complemento</label>
+                <input type="text" id="complemento" name="complemento">
+            </div>
+
+            <div class="form-group">
+                <label for="cidade" class="required" style="text-align: left;">Cidade</label>
+                <input type="text" id="cidade" name="cidade" required>
+            </div>
+
+            <div class="form-group">
+                <label for="uf" class="required" style="text-align: left;">UF</label>
+                <select id="uf" name="uf" required>
+                    <option value="">Selecione...</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+            </div>
+
+            <div class="buttons">
+                <button type="submit" class="btn-primary">Avançar</button>
+                
+                <button type="button" class="btn-secondary" onclick="window.location.href='index.html'">Voltar</button>
+            </div>
+        </form>
+    </div>
+    
+    <footer>
+    <p style="text-align: center;">
+        &copy; 2024 IcardDigital. Todos os direitos reservados.
+        </p>
+<p>
+        <span style="float: right;"> 
+            <a href="mailto:contato@icarddigital.com?subject=Contato%20via%20Fale%20Conosco%20do%20Site" style="color: white; text-decoration: none;">
+                Fale Conosco
+            </a>
+        </span>
+    </p>
+</footer>
+    <script>
+        // --- Máscaras (Mantidas e Corrigidas) ---
+
+        // Máscara para CNPJ
+        document.getElementById('cnpj').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 14) value = value.slice(0, 14);
+            
+            if (value.length === 14) {
+                value = value.replace(/^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})$/, "$1.$2.$3/$4-$5");
+            }
+            e.target.value = value;
+        });
+
+        // Máscara para telefone
+        document.getElementById('telefone').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 11) value = value.slice(0, 11);
+            
+            if (value.length >= 11) {
+                value = `(${value.slice(0,2)}) ${value.slice(2,7)}-${value.slice(7)}`;
+            } else if (value.length >= 6) {
+                value = `(${value.slice(0,2)}) ${value.slice(2,6)}-${value.slice(6)}`;
+            } else if (value.length > 2) {
+                value = `(${value.slice(0,2)}) ${value.slice(2)}`;
+            } else if (value.length > 0) {
+                value = `(${value.slice(0,2)}`;
+            }
+            e.target.value = value;
+        });
+
+        // --- Consulta de CEP (Mantida) ---
+        async function consultaCEP() {
+            const cepInput = document.getElementById('cep');
+            const cep = cepInput.value.replace(/\D/g, '');
+            if (cep.length !== 8) return;
+
+            try {
+                const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+                const data = await response.json();
+                
+                if (!data.erro) {
+                    document.getElementById('logradouro').value = data.logradouro;
+                    document.getElementById('rua').value = data.logradouro; 
+                    document.getElementById('bairro').value = data.bairro;
+                    document.getElementById('cidade').value = data.localidade;
+                    document.getElementById('uf').value = data.uf;
+                    document.getElementById('numero').focus();
+                } else {
+                    alert('CEP não encontrado.');
+                }
+            } catch (error) {
+                console.error('Erro ao consultar CEP:', error);
+            }
+        }
+
+        // --- FUNÇÃO PRINCIPAL DE VALIDAÇÃO E POP-UP ---
+        function validarFormulario() {
+            const form = document.getElementById('cadastroForm');
+            
+            // 1. Validação HTML5 Nativa
+            if (form.checkValidity() === false) {
+                return false; 
+            }
+            
+            // 2. Validações Manuais
+            const telefoneInput = document.getElementById('telefone');
+            const cnpjInput = document.getElementById('cnpj');
+            
+            const cnpjLimpo = cnpjInput.value.replace(/\D/g, '');
+            if (cnpjLimpo.length !== 14) {
+                alert('CNPJ inválido. Digite 14 dígitos.');
+                cnpjInput.focus();
+                return false;
+            }
+            
+            const telefoneLimpo = telefoneInput.value.replace(/\D/g, '');
+            if (telefoneLimpo.length < 10) { 
+                alert('Telefone inválido. Verifique o DDD e o número.');
+                telefoneInput.focus();
+                return false;
+            }
+
+            // 3. Se todas as validações passarem:
+            alert("Fornecedor cadastrado com sucesso!");
+            window.location.href = 'c_acesso.html';
+            
+            return false; 
+        }
+    </script>
+</body>
+</html>
