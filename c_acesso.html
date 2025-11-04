@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IcardDigital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h2>IcardDigital</h2>
+        <style>
+            body {
+                background-image: url('/site/img/Gemini_Generated_Image_psg3odpsg3odpsg3.png');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                min-height: 100vh;
+            }
+        </style>
+        <p>Conectando você à rede exclusiva que garante a máxima excelência em cada produto e serviço oferecido</p>
+    </header>
+    <footer>
+<span style="float: right;"> 
+            <a href="mailto:contato@icarddigital.com?subject=Contato%20via%20Fale%20Conosco%20do%20Site" style="color: white; text-decoration: none;">
+                Fale Conosco
+            </a>
+        </span>
+    </p>
+</footer>
+<button class="btn btn-voltar"  onclick="window.location.href='index.html'">Tela inícial</button>
+<div class="menu-container">
+    
+    <div class="search-area">
+        <input type="text" id="search-input" placeholder="Pesquisar">
+    </div>
+
+    <div class="menu-items-box">
+        <h3>Pizza</h3>
+        
+        <ul class="item-list">
+            
+            <li class="menu-item" data-name="CALABRESA" data-price="34.99">
+                <div class="item-details">
+                    <span class="name">CALABRESA</span>
+                    <span class="price">R$ 34,99</span>
+                </div>
+                <button class="add-button" onclick="addItem('CALABRESA', 34.99)">Adicionar</button>
+            </li>
+
+            <li class="menu-item" data-name="PORTUGUESA" data-price="34.99">
+                <div class="item-details">
+                    <span class="name">PORTUGUESA</span>
+                    <span class="price">R$ 34,99</span>
+                </div>
+                <button class="add-button" onclick="addItem('PORTUGUESA', 34.99)">Adicionar</button>
+            </li>
+
+            <li class="menu-item" data-name="FRANGO" data-price="34.99">
+                <div class="item-details">
+                    <span class="name">FRANGO</span>
+                    <span class="price">R$ 34,99</span>
+                </div>
+                <button class="add-button" onclick="addItem('FRANGO', 34.99)">Adicionar</button>
+            </li>
+            
+            </ul>
+        <h3>Macarrão</h3>
+        
+        <ul class="item-list">
+            
+            <li class="menu-item" data-name="CALABRESA" data-price="34.99">
+                <div class="item-details">
+                    <span class="name">Espaguete à Carbonara</span>
+                    <span class="price">R$ 25,99</span>
+                </div>
+                <button class="add-button" onclick="addItem('CALABRESA', 34.99)">Adicionar</button>
+            </li>
+
+            <li class="menu-item" data-name="PORTUGUESA" data-price="34.99">
+                <div class="item-details">
+                    <span class="name">Macarrão à Bolonhesa</span>
+                    <span class="price">R$ 39,99</span>
+                </div>
+                <button class="add-button" onclick="addItem('PORTUGUESA', 34.99)">Adicionar</button>
+            </li>
+
+            <li class="menu-item" data-name="FRANGO" data-price="34.99">
+                <div class="item-details">
+                    <span class="name">Fettuccine Alfredo</span>
+                    <span class="price">R$ 30,99</span>
+                </div>
+                <button class="add-button" onclick="addItem('FRANGO', 34.99)">Adicionar</button>
+            </li>
+                        <li class="menu-item" data-name="FRANGO" data-price="34.99">
+                <div class="item-details">
+                    <span class="name">Macarrão ao Molho Pesto</span>
+                    <span class="price">R$ 25,99</span>
+                </div>
+                <button class="add-button" onclick="addItem('FRANGO', 34.99)">Adicionar</button>
+            </li>
+            </ul>
+        <h3>Hambúrguer</h3>
+        
+        <ul class="item-list">
+            
+            <li class="menu-item" data-name="CALABRESA" data-price="34.99">
+                <div class="item-details">
+                    <span class="name">Tradicional</span>
+                    <span class="price">R$ 19,99</span>
+                </div>
+                <button class="add-button" onclick="addItem('CALABRESA', 34.99)">Adicionar</button>
+            </li>
+
+            <li class="menu-item" data-name="PORTUGUESA" data-price="34.99">
+                <div class="item-details">
+                    <span class="name">Cheeseburger Clássico</span>
+                    <span class="price">R$ 24,99</span>
+                </div>
+                <button class="add-button" onclick="addItem('PORTUGUESA', 34.99)">Adicionar</button>
+            </li>
+
+            <li class="menu-item" data-name="FRANGO" data-price="34.99">
+                <div class="item-details">
+                    <span class="name">Hambúrguer Gourmet</span>
+                    <span class="price">R$ 49,99</span>
+                </div>
+                <button class="add-button" onclick="addItem('FRANGO', 34.99)">Adicionar</button>
+            </li>
+                        <li class="menu-item" data-name="FRANGO" data-price="34.99">
+                <div class="item-details">
+                    <span class="name">Hambúrguer Vegano</span>
+                    <span class="price">R$ 25,99</span>
+                </div>
+                <button class="add-button" onclick="addItem('FRANGO', 34.99)">Adicionar</button>
+            </li>
+                                    <li class="menu-item" data-name="FRANGO" data-price="34.99">
+                <div class="item-details">
+                    <span class="name">Hambúrguer de Frango</span>
+                    <span class="price">R$ 30,99</span>
+                </div>
+                <button class="add-button" onclick="addItem('FRANGO', 34.99)">Adicionar</button>
+            </li>
+                                    <li class="menu-item" data-name="FRANGO" data-price="34.99">
+                <div class="item-details">
+                    <span class="name">Hambúrguer Artesanal</span>
+                    <span class="price">R$ 45,99</span>
+                </div>
+                <button class="add-button" onclick="addItem('FRANGO', 34.99)">Adicionar</button>
+            </li>
+            </ul>
+    </div>
+</div>
+
+<div class="footer-fixed">
+    <div class="order-info">
+        <span class="total-text">Total do Pedido:</span>
+        <span class="total-value" id="order-total">R$ 0,00</span>
+    </div>
+    
+    <button 
+        class="request-button" 
+        id="request-button" 
+        onclick="sendWhatsAppOrder()" 
+        disabled>
+        Pedir
+    </button>
+</div>
+
+<script>
+    const cart = {}; // Objeto para armazenar {nome_do_item: quantidade}
+    let totalValue = 0;
+    const orderTotalElement = document.getElementById('order-total');
+    const requestButton = document.getElementById('request-button');
+    const whatsappNumber = '5511999999999'; // Substitua pelo número de WhatsApp (código do país + DDD + número)
+
+    /**
+     * Adiciona um item ao carrinho e atualiza a interface.
+     * @param {string} name - Nome do item.
+     * @param {number} price - Preço do item.
+     */
+    function addItem(name, price) {
+        // Incrementa a quantidade ou adiciona o item
+        if (cart[name]) {
+            cart[name]++;
+        } else {
+            cart[name] = 1;
+        }
+
+        // Atualiza o total
+        totalValue += price;
+        
+        updateOrderSummary();
+    }
+
+    /**
+     * Atualiza o valor total no rodapé e o estado do botão "Pedir".
+     */
+    function updateOrderSummary() {
+        // Formata o valor total para BRL
+        const formattedTotal = totalValue.toLocaleString('pt-BR', {
+            style: 'currency',
+            currency: 'BRL'
+        });
+
+        orderTotalElement.textContent = formattedTotal;
+
+        // Ativa/Desativa o botão "Pedir"
+        if (totalValue > 0) {
+            requestButton.disabled = false;
+        } else {
+            requestButton.disabled = true;
+        }
+        
+        console.log('Carrinho atual:', cart);
+    }
+    
+    /**
+     * Gera a mensagem de pedido e abre o WhatsApp.
+     */
+    function sendWhatsAppOrder() {
+        if (totalValue === 0) {
+            alert('Seu carrinho está vazio!');
+            return;
+        }
+        
+        let message = 'Olá! Meu pedido é:\n\n';
+        
+        // Constrói a lista de itens no pedido
+        for (const item in cart) {
+            if (cart[item] > 0) {
+                // Supondo que o preço por unidade é sempre o mesmo.
+                // Na versão completa, seria melhor buscar o preço novamente.
+                message += `${cart[item]}x ${item}\n`;
+            }
+        }
+        
+        // Adiciona o total
+        const formattedTotal = totalValue.toLocaleString('pt-BR', {
+            style: 'currency',
+            currency: 'BRL'
+        });
+        
+        message += `\nTotal: ${formattedTotal}`;
+        
+        // Codifica a mensagem para URL
+        const encodedMessage = encodeURIComponent(message);
+        
+        // Constrói a URL do WhatsApp
+        const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodedMessage}`;
+        
+        // Abre o link em uma nova aba
+        window.open(whatsappUrl, '_blank');
+    }
+
+    // Opcional: Implementação simples de pesquisa (busca por nome)
+    document.getElementById('search-input').addEventListener('input', function() {
+        const query = this.value.toUpperCase();
+        const items = document.querySelectorAll('.menu-item');
+        
+        items.forEach(item => {
+            const itemName = item.getAttribute('data-name');
+            if (itemName.includes(query)) {
+                item.style.display = 'flex';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    });
+
+</script>    
+</script>
+        <!--<button class="btn btn-continuar" onclick="acessar()">Continuar</button>-->
+        
+    </form>
+<footer>
+    <p style="text-align: center;">
+        &copy; 2024 IcardDigital. Todos os direitos reservados.
+        </p>
+    </p>
+</footer>
+</body>
+</html>
