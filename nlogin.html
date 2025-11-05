@@ -30,27 +30,19 @@
         <form id="cadastroForm" onsubmit="return validarFormulario()" class="responsive-form">
             
             <div class="form-group">
-                <label for="nome" class="required" style="text-align: left;">Nome Completo</label>
+                <label for="nome" class="required" style="text-align: left;">Nome /Razão Social</label>
                 <input type="text" id="nome" name="nome" required>
             </div>
-
-            <div class="form-group">
-                <label for="telefone" class="required" style="text-align: left;">Telefone de Contato</label>
-                <input type="tel" id="telefone" name="telefone" required 
-                       placeholder="(00) 00000-0000" maxlength="15">
-            </div>
-
-            <div class="form-group">
-                <label for="estabelecimento" class="required" style="text-align: left;">Nome do Estabelecimento</label>
-                <input type="text" id="estabelecimento" name="estabelecimento" required>
-            </div>
-
             <div class="form-group">
                 <label for="cnpj" class="required" style="text-align: left;">CNPJ</label>
                 <input type="text" id="cnpj" name="cnpj" required maxlength="18"
                        placeholder="00.000.000/0000-00">
             </div>
-
+            <div class="form-group">
+                <label for="telefone" class="required" style="text-align: left;">Telefone de Contato</label>
+                <input type="tel" id="telefone" name="telefone" required 
+                       placeholder="(00) 00000-0000" maxlength="15">
+            </div>
             <div class="form-group">
                 <label for="culinaria" class="required" style="text-align: left;">Estilo da Culinária</label>
                 <select id="culinaria" name="culinaria" required>
